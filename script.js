@@ -19,7 +19,7 @@ playing.addEventListener("click", () => {
 
 function reset() {
     player1 = document.querySelector('input[name="play"]:checked').value
-    imgUser.innerHTML = "<img src='/assets/images/" + player1 + ".png'>"
+    imgUser.innerHTML = "<img src='./images/" + player1 + ".png'>"
     imgPC.innerHTML = ""
 }
 
@@ -27,7 +27,7 @@ function playPc() {
     let opt = ['rock', 'paper', 'scissor']
     let num = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
     player2 = opt[num]
-    imgPC.innerHTML = "<img src='/assets/images/" + player2 + ".png'>"
+    imgPC.innerHTML = "<img src='./images/" + player2 + ".png'>"
     analyze()
 }
 
