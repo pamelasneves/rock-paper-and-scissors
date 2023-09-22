@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock paper scissors game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game" class="container">
+        <h1>
+           Rock Paper Scissors
+        </h1>
+        <div class="bloco">
+          <div class="label bg-green">USER</div>
+          <div class="label bg-red">PC</div>
+          <div id="scoreboard" class="counter">
+              0:0
+          </div>
+        </div>
+        <div class="bloco bg-grey selected-image">
+           <div id="user">
+               <img src="./images/rock.png">
+           </div>
+           <div id="pc" class="reverse"></div>
+        </div>
+        <h2>Choose Your Move</h2>
+        <div class="buttons">
+           <label>
+              <input type="radio" onclick="reset()" name="play" value="paper" checked>
+              <button class="btn"><img src="./images/paper.png"></button>
+           </label>
+           <label>
+              <input type="radio" onclick="reset()" name="play" value="rock" checked>
+              <button class="btn"><img src="./images/rock.png"></button>
+           </label>
+           <label>
+              <input type="radio" onclick="reset()" name="play" value="scissor" checked>
+              <button class="btn"><img src="./images/scissor.png"></button>
+           </label>
+        </div>  
+        <div class="bloco">
+            <button id="playing" class="btn-play">Play</button>
+        </div>
+    </div> 
+    <div id="winner" class="container end-screen none">
+       <span>🏆🏆🏆</span>
+       <h3>You Won!</h3>
+       <button onclick="newGame()">Play Again</button>
+    </div>
+    <div id="loser" class="container-end-screen none">
+      <h3>YOU LOST!</h3>
+      <button onclick="newGame()">Play Again</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
